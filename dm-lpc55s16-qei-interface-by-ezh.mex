@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="LPC55S16" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_15 http://mcuxpresso.nxp.com/XSD/mex_configuration_15.xsd" uuid="b74cd1a3-be4f-4ee2-a531-b7b0f896df43" version="15" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>LPC55S16</processor>
+      <package>LPC55S16JBD100</package>
+      <board>LPCXpresso55S16</board>
+      <mcu_data>ksdk2_0</mcu_data>
+      <cores selected="cm33_core0">
+         <core name="Cortex-M33" id="cm33_core0" description="M33 core"/>
+      </cores>
+      <description></description>
+   </common>
+   <preferences>
+      <validate_boot_init_only>true</validate_boot_init_only>
+      <generate_extended_information>false</generate_extended_information>
+      <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+      <update_include_paths>true</update_include_paths>
+      <generate_registers_defines>false</generate_registers_defines>
+   </preferences>
+   <tools>
+      <pins name="Pins" version="15.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/pin_mux.c" update_enabled="true"/>
+            <file path="board/pin_mux.h" update_enabled="true"/>
+         </generated_project_files>
+         <pins_profile>
+            <processor_version>15.0.1</processor_version>
+            <pin_labels>
+               <pin_label pin_num="81" pin_signal="PIO0_2/FC3_TXD_SCL_MISO_WS/CT_INP1/SCT0_OUT0/SCT_GPI2/SECURE_GPIO0_2" label="J10[20]/U24[12]/FC3_SPI_MISO" identifier="COL2"/>
+               <pin_label pin_num="83" pin_signal="PIO0_3/FC3_RXD_SDA_MOSI_DATA/CTIMER0_MAT1/SCT0_OUT1/SCT_GPI3/SECURE_GPIO0_3" label="J10[18]/U24[11]/FC3_SPI_MOSI" identifier="COL3"/>
+               <pin_label pin_num="86" pin_signal="PIO0_4/CAN0_RD/FC4_SCK/CT_INP12/SCT_GPI4/FC3_CTS_SDA_SSEL0/SECURE_GPIO0_4" label="J10[16]/U24[14]/FC3_SPI_SSEL0" identifier="COL4"/>
+               <pin_label pin_num="89" pin_signal="PIO0_6/FC3_SCK/CT_INP13/CTIMER4_MAT0/SCT_GPI6/SECURE_GPIO0_6" label="J10[14]/U24[13]/FC3_SPI_SCK" identifier="COL1"/>
+               <pin_label pin_num="71" pin_signal="PIO0_13/FC1_CTS_SDA_SSEL0/UTICK_CAP0/CT_INP0/SCT_GPI0/FC1_RXD_SDA_MOSI_DATA/PLU_IN0/SECURE_GPIO0_13" label="J13[9]/J13[10]/J18[8]/JS5[2]/FC1_I2C_SDA" identifier="ROW1"/>
+               <pin_label pin_num="72" pin_signal="PIO0_14/FC1_RTS_SCL_SSEL1/UTICK_CAP1/CT_INP1/SCT_GPI1/FC1_TXD_SCL_MISO_WS/PLU_IN1/SECURE_GPIO0_14" label="J13[11]/J13[12]/J18[6]/JS4[2]/FC1_I2C_SCL" identifier="ROW2"/>
+               <pin_label pin_num="14" pin_signal="PIO0_16/FC4_TXD_SCL_MISO_WS/CLKOUT/CT_INP4/SECURE_GPIO0_16/ADC0_8" label="J7[1]/J13[1]/JP4[1]/ARD_MIK_ADC0_8_N" identifier="phase_B"/>
+               <pin_label pin_num="60" pin_signal="PIO0_26/FC2_RXD_SDA_MOSI_DATA/CLKOUT/CT_INP14/SCT0_OUT5/USB0_IDVALUE/FC0_SCK/HS_SPI_MOSI/SECURE_GPIO0_26" label="J7[6]/J9[14]/ARD_MIK_HSSPI_MOSI" identifier="MOSI"/>
+               <pin_label pin_num="59" pin_signal="PIO1_1/FC3_RXD_SDA_MOSI_DATA/CT_INP3/SCT_GPI5/HS_SPI_SSEL1/USB1_OVERCURRENTN/PLU_OUT4" label="J7[3]/J9[16]/ARD_MIK_HSSPI_SSEL1" identifier="CS"/>
+               <pin_label pin_num="61" pin_signal="PIO1_2/CAN0_TD/CTIMER0_MAT3/SCT_GPI6/HS_SPI_SCK/USB1_PORTPWRN/PLU_OUT5" label="J7[4]/J9[10]/ARD_MIK_HSSPI_SCK" identifier="SCK"/>
+               <pin_label pin_num="62" pin_signal="PIO1_3/CAN0_RD/SCT0_OUT4/HS_SPI_MISO/USB0_PORTPWRN/PLU_OUT6" label="J7[5]/J9[12]/ARD_MIK_HSSPI_MISO" identifier="MOSI;MISO"/>
+               <pin_label pin_num="31" pin_signal="PIO1_5/FC0_RXD_SDA_MOSI_DATA/CTIMER2_MAT0/SCT_GPI0" label="J8[1]/J9[18]/ARD_MIK_P1_5" identifier="phase_A"/>
+               <pin_label pin_num="64" pin_signal="PIO1_18/SCT0_OUT5/PLU_OUT0" label="SW1/J8[2]/J12[15]/MIK_EXP_BTN_WK" identifier="SW1;WAKEUP;Knob_detect"/>
+               <pin_label pin_num="58" pin_signal="PIO1_19/SCT0_OUT7/CTIMER3_MAT1/SCT_GPI7/FC4_SCK/PLU_OUT1/ACMPVREF" label="J18[4]/ISP_P1_19" identifier="ROW3"/>
+               <pin_label pin_num="73" pin_signal="PIO1_28/FC7_SCK/CT_INP2/PLU_IN3" label="J9[17]/J18[2]/EXP_ISP_P1_28" identifier="ROW4"/>
+            </pin_labels>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>cm33_core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="FLEXCOMM0" description="Peripheral FLEXCOMM0 signals are routed in the Pins Tool, but the peripheral is not initialized in the Peripherals Tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="SWD" description="Peripheral SWD signals are routed in the Pins Tool, but the peripheral is not initialized in the Peripherals Tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iocon" description="Pins initialization requires the LPC_IOCON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="FLEXCOMM0" signal="RXD_SDA_MOSI_DATA" pin_num="92" pin_signal="PIO0_29/FC0_RXD_SDA_MOSI_DATA/CTIMER2_MAT3/SCT0_OUT8/CMP0_OUT/PLU_OUT2/SECURE_GPIO0_29">
+                     <pin_features>
+                        <pin_feature name="mode" value="inactive"/>
+                        <pin_feature name="slew_rate" value="standard"/>
+                        <pin_feature name="invert" value="disabled"/>
+                        <pin_feature name="open_drain" value="disabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM0" signal="TXD_SCL_MISO_WS" pin_num="94" pin_signal="PIO0_30/FC0_TXD_SCL_MISO_WS/CTIMER0_MAT0/SCT0_OUT9/SECURE_GPIO0_30">
+                     <pin_features>
+                        <pin_feature name="mode" value="inactive"/>
+                        <pin_feature name="slew_rate" value="standard"/>
+                        <pin_feature name="invert" value="disabled"/>
+                        <pin_feature name="open_drain" value="disabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SWD" signal="SWO" pin_num="21" pin_signal="PIO0_10/FC6_SCK/CT_INP10/CTIMER2_MAT0/FC1_TXD_SCL_MISO_WS/SCT0_OUT2/SWO/SECURE_GPIO0_10/ADC0_1">
+                     <pin_features>
+                        <pin_feature name="mode" value="inactive"/>
+                        <pin_feature name="slew_rate" value="standard"/>
+                        <pin_feature name="invert" value="disabled"/>
+                        <pin_feature name="open_drain" value="disabled"/>
+                        <pin_feature name="asw" value="disabled"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+            <function name="PinsFunc_QEI">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>cm33_core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="FLEXCOMM8" description="Peripheral FLEXCOMM8 signals are routed in the Pins Tool, but the peripheral is not initialized in the Peripherals Tool." problem_level="1" source="Pins:PinsFunc_QEI">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:PinsFunc_QEI">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_gpio" description="Pins initialization requires the LPC_GPIO Driver in the project." problem_level="2" source="Pins:PinsFunc_QEI">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIO" signal="PIO0, 16" pin_num="14" pin_signal="PIO0_16/FC4_TXD_SCL_MISO_WS/CLKOUT/CT_INP4/SECURE_GPIO0_16/ADC0_8">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="mode" value="inactive"/>
+                        <pin_feature name="slew_rate" value="standard"/>
+                        <pin_feature name="invert" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO1, 5" pin_num="31" pin_signal="PIO1_5/FC0_RXD_SDA_MOSI_DATA/CTIMER2_MAT0/SCT_GPI0">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="mode" value="inactive"/>
+                        <pin_feature name="slew_rate" value="standard"/>
+                        <pin_feature name="invert" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO1, 18" pin_num="64" pin_signal="PIO1_18/SCT0_OUT5/PLU_OUT0">
+                     <pin_features>
+                        <pin_feature name="identifier" value="Knob_detect"/>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="mode" value="pullUp"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM8" signal="HS_SPI_SCK" pin_num="61" pin_signal="PIO1_2/CAN0_TD/CTIMER0_MAT3/SCT_GPI6/HS_SPI_SCK/USB1_PORTPWRN/PLU_OUT5"/>
+                  <pin peripheral="FLEXCOMM8" signal="HS_SPI_MISO" pin_num="62" pin_signal="PIO1_3/CAN0_RD/SCT0_OUT4/HS_SPI_MISO/USB0_PORTPWRN/PLU_OUT6">
+                     <pin_features>
+                        <pin_feature name="identifier" value="MISO"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM8" signal="HS_SPI_MOSI" pin_num="60" pin_signal="PIO0_26/FC2_RXD_SDA_MOSI_DATA/CLKOUT/CT_INP14/SCT0_OUT5/USB0_IDVALUE/FC0_SCK/HS_SPI_MOSI/SECURE_GPIO0_26"/>
+                  <pin peripheral="GPIO" signal="PIO1, 1" pin_num="59" pin_signal="PIO1_1/FC3_RXD_SDA_MOSI_DATA/CT_INP3/SCT_GPI5/HS_SPI_SSEL1/USB1_OVERCURRENTN/PLU_OUT4">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="gpio_init_state" value="false"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+         </functions_list>
+      </pins>
+      <clocks name="Clocks" version="13.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/clock_config.c" update_enabled="true"/>
+            <file path="board/clock_config.h" update_enabled="true"/>
+         </generated_project_files>
+         <clocks_profile>
+            <processor_version>15.0.1</processor_version>
+         </clocks_profile>
+         <clock_configurations>
+            <clock_configuration name="BOARD_BootClockFRO12M" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>false</called_from_default_init>
+            </clock_configuration>
+            <clock_configuration name="BOARD_BootClockFROHF96M" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="96 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
+                  <setting id="SYSCON.MAINCLKSELA.sel" value="ANACTRL.fro_hf_clk" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>false</called_from_default_init>
+            </clock_configuration>
+            <clock_configuration name="BOARD_BootClockPLL100M" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="direction" evaluation="">
+                        <data>INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="direction" evaluation="">
+                        <data>OUTPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
+                  <clock_source id="SYSCON.XTAL32M.outFreq" value="16 MHz" locked="false" enabled="true"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="100 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="PLL0_Mode" value="Normal" locked="false"/>
+                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
+                  <setting id="ENABLE_CLKIN_ENA" value="Enabled" locked="false"/>
+                  <setting id="ENABLE_SYSTEM_CLK_OUT" value="Enabled" locked="false"/>
+                  <setting id="SYSCON.MAINCLKSELB.sel" value="SYSCON.PLL0_BYPASS" locked="false"/>
+                  <setting id="SYSCON.PLL0CLKSEL.sel" value="SYSCON.CLK_IN_EN" locked="false"/>
+                  <setting id="SYSCON.PLL0M_MULT.scale" value="100" locked="true"/>
+                  <setting id="SYSCON.PLL0N_DIV.scale" value="4" locked="true"/>
+                  <setting id="SYSCON.PLL0_PDEC.scale" value="4" locked="true"/>
+               </clock_settings>
+               <called_from_default_init>false</called_from_default_init>
+            </clock_configuration>
+            <clock_configuration name="BOARD_BootClockPLL150M" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="direction" evaluation="">
+                        <data>INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="direction" evaluation="">
+                        <data>OUTPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
+                  <clock_source id="SYSCON.XTAL32M.outFreq" value="16 MHz" locked="false" enabled="true"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+                  <clock_output id="HSLSPI_clock.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="150 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="PLL0_Mode" value="Normal" locked="false"/>
+                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
+                  <setting id="ENABLE_CLKIN_ENA" value="Enabled" locked="false"/>
+                  <setting id="ENABLE_SYSTEM_CLK_OUT" value="Enabled" locked="false"/>
+                  <setting id="FROHFDIV_HALT" value="Enable" locked="false"/>
+                  <setting id="SYSCON.FROHFDIV.scale" value="2" locked="false"/>
+                  <setting id="SYSCON.HSLSPICLKSEL.sel" value="SYSCON.FROHFDIV" locked="false"/>
+                  <setting id="SYSCON.MAINCLKSELB.sel" value="SYSCON.PLL0_BYPASS" locked="false"/>
+                  <setting id="SYSCON.PLL0CLKSEL.sel" value="SYSCON.CLK_IN_EN" locked="false"/>
+                  <setting id="SYSCON.PLL0M_MULT.scale" value="150" locked="true"/>
+                  <setting id="SYSCON.PLL0N_DIV.scale" value="8" locked="true"/>
+                  <setting id="SYSCON.PLL0_PDEC.scale" value="2" locked="true"/>
+               </clock_settings>
+               <called_from_default_init>true</called_from_default_init>
+            </clock_configuration>
+            <clock_configuration name="BOARD_BootClockPLL1_150M" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="direction" evaluation="">
+                        <data>INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="direction" evaluation="">
+                        <data>OUTPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
+                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="SYSCON.XTAL32M.outFreq" value="16 MHz" locked="false" enabled="true"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="150 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="PLL1_Mode" value="Normal" locked="false"/>
+                  <setting id="ENABLE_CLKIN_ENA" value="Enabled" locked="false"/>
+                  <setting id="ENABLE_SYSTEM_CLK_OUT" value="Enabled" locked="false"/>
+                  <setting id="SYSCON.MAINCLKSELB.sel" value="SYSCON.PLL1_BYPASS" locked="false"/>
+                  <setting id="SYSCON.PLL1CLKSEL.sel" value="SYSCON.CLK_IN_EN" locked="false"/>
+                  <setting id="SYSCON.PLL1M_MULT.scale" value="150" locked="true"/>
+                  <setting id="SYSCON.PLL1N_DIV.scale" value="8" locked="true"/>
+                  <setting id="SYSCON.PLL1_PDEC.scale" value="2" locked="true"/>
+               </clock_settings>
+               <called_from_default_init>false</called_from_default_init>
+            </clock_configuration>
+         </clock_configurations>
+      </clocks>
+      <dcdx name="DCDx" version="3.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <dcdx_profile>
+            <processor_version>N/A</processor_version>
+         </dcdx_profile>
+         <dcdx_configurations/>
+      </dcdx>
+      <periphs name="Peripherals" version="14.0" enabled="true" update_project_code="true">
+         <dependencies>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.gint" description="GINT Driver is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.gint" description="An unsupported version of the GINT Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. The project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.1.0</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.flexcomm_spi" description="FLEXCOMM SPI Driver is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.flexcomm_spi" description="An unsupported version of the FLEXCOMM SPI Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. The project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.3.0</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="Tool" resourceId="Clocks" description="The Clocks tool is required by the Peripherals tool, but it is disabled." problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data>true</data>
+               </feature>
+            </dependency>
+         </dependencies>
+         <generated_project_files>
+            <file path="board/peripherals.c" update_enabled="true"/>
+            <file path="board/peripherals.h" update_enabled="true"/>
+         </generated_project_files>
+         <peripherals_profile>
+            <processor_version>15.0.1</processor_version>
+         </peripherals_profile>
+         <functional_groups>
+            <functional_group name="BOARD_InitPeripherals" uuid="a03234ce-4cdd-4e29-88ec-16f4b0a816ea" called_from_default_init="true" id_prefix="" core="cm33_core0">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="GPIO.pio1.18" description="Signal PIO1, channel 18 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="FLEXCOMM8.spi_miso" description="Signal SPI master data in, slave data out is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="FLEXCOMM8.spi_mosi" description="Signal SPI master data out, slave data in is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="FLEXCOMM8.spi_sck" description="Signal SPI serial clock pin is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="FLEXCOMM8.spi_ss1" description="Signal SPI slave select 1 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="HSLSPI_clock" description="HSLSPI clock is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <instances>
+                  <instance name="NVIC" uuid="e97dacf6-5efb-47a9-b62e-e469f9a7d29b" type="nvic" type_id="nvic_57b5eef3774cc60acaede6f5b8bddc67" mode="general" peripheral="NVIC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="nvic">
+                        <array name="interrupt_table"/>
+                        <array name="interrupts"/>
+                     </config_set>
+                  </instance>
+                  <instance name="GINT0" uuid="17d5ed5a-f46c-4d4d-9c87-ddb6df2fe66d" type="gint" type_id="gint_3ff9859353200e3aab0c0e68d85dc4dd" mode="general" peripheral="GINT0" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_gint">
+                        <struct name="commonCfg">
+                           <setting name="gint_comb" value="kGINT_CombineOr"/>
+                           <setting name="gint_trig" value="kGINT_TrigEdge"/>
+                        </struct>
+                        <struct name="callbackCfg">
+                           <setting name="callback_name" value="pio1_18_gint_callback"/>
+                           <setting name="isCallbackEnabled" value="true"/>
+                           <setting name="enable_priority" value="true"/>
+                           <setting name="priority" value="0"/>
+                        </struct>
+                        <struct name="pins_port0">
+                           <struct name="enable">
+                              <array name="enable_low">
+                                 <setting name="0" value="no"/>
+                                 <setting name="1" value="no"/>
+                                 <setting name="2" value="no"/>
+                                 <setting name="3" value="no"/>
+                                 <setting name="4" value="no"/>
+                                 <setting name="5" value="no"/>
+                                 <setting name="6" value="no"/>
+                                 <setting name="7" value="no"/>
+                                 <setting name="8" value="no"/>
+                                 <setting name="9" value="no"/>
+                                 <setting name="10" value="no"/>
+                                 <setting name="11" value="no"/>
+                                 <setting name="12" value="no"/>
+                                 <setting name="13" value="no"/>
+                                 <setting name="14" value="no"/>
+                                 <setting name="15" value="no"/>
+                              </array>
+                              <array name="enable_high">
+                                 <setting name="0" value="no"/>
+                                 <setting name="1" value="no"/>
+                                 <setting name="2" value="no"/>
+                                 <setting name="3" value="no"/>
+                                 <setting name="4" value="no"/>
+                                 <setting name="5" value="no"/>
+                                 <setting name="6" value="no"/>
+                                 <setting name="7" value="no"/>
+                                 <setting name="8" value="no"/>
+                                 <setting name="9" value="no"/>
+                                 <setting name="10" value="no"/>
+                                 <setting name="11" value="no"/>
+                                 <setting name="12" value="no"/>
+                                 <setting name="13" value="no"/>
+                                 <setting name="14" value="no"/>
+                                 <setting name="15" value="no"/>
+                              </array>
+                           </struct>
+                           <struct name="polarity">
+                              <array name="polarity_low">
+                                 <setting name="0" value="low"/>
+                                 <setting name="1" value="low"/>
+                                 <setting name="2" value="low"/>
+                                 <setting name="3" value="low"/>
+                                 <setting name="4" value="low"/>
+                                 <setting name="5" value="low"/>
+                                 <setting name="6" value="low"/>
+                                 <setting name="7" value="low"/>
+                                 <setting name="8" value="low"/>
+                                 <setting name="9" value="low"/>
+                                 <setting name="10" value="low"/>
+                                 <setting name="11" value="low"/>
+                                 <setting name="12" value="low"/>
+                                 <setting name="13" value="low"/>
+                                 <setting name="14" value="low"/>
+                                 <setting name="15" value="low"/>
+                              </array>
+                              <array name="polarity_high">
+                                 <setting name="0" value="low"/>
+                                 <setting name="1" value="low"/>
+                                 <setting name="2" value="low"/>
+                                 <setting name="3" value="low"/>
+                                 <setting name="4" value="low"/>
+                                 <setting name="5" value="low"/>
+                                 <setting name="6" value="low"/>
+                                 <setting name="7" value="low"/>
+                                 <setting name="8" value="low"/>
+                                 <setting name="9" value="low"/>
+                                 <setting name="10" value="low"/>
+                                 <setting name="11" value="low"/>
+                                 <setting name="12" value="low"/>
+                                 <setting name="13" value="low"/>
+                                 <setting name="14" value="low"/>
+                                 <setting name="15" value="low"/>
+                              </array>
+                           </struct>
+                        </struct>
+                        <struct name="pins_port1">
+                           <struct name="enable">
+                              <array name="enable_low">
+                                 <setting name="0" value="no"/>
+                                 <setting name="1" value="no"/>
+                                 <setting name="2" value="no"/>
+                                 <setting name="3" value="no"/>
+                                 <setting name="4" value="no"/>
+                                 <setting name="5" value="no"/>
+                                 <setting name="6" value="no"/>
+                                 <setting name="7" value="no"/>
+                                 <setting name="8" value="no"/>
+                                 <setting name="9" value="no"/>
+                                 <setting name="10" value="no"/>
+                                 <setting name="11" value="no"/>
+                                 <setting name="12" value="no"/>
+                                 <setting name="13" value="no"/>
+                                 <setting name="14" value="no"/>
+                                 <setting name="15" value="no"/>
+                              </array>
+                              <array name="enable_high">
+                                 <setting name="0" value="no"/>
+                                 <setting name="1" value="no"/>
+                                 <setting name="2" value="yes"/>
+                                 <setting name="3" value="no"/>
+                                 <setting name="4" value="no"/>
+                                 <setting name="5" value="no"/>
+                                 <setting name="6" value="no"/>
+                                 <setting name="7" value="no"/>
+                                 <setting name="8" value="no"/>
+                                 <setting name="9" value="no"/>
+                                 <setting name="10" value="no"/>
+                                 <setting name="11" value="no"/>
+                                 <setting name="12" value="no"/>
+                                 <setting name="13" value="no"/>
+                                 <setting name="14" value="no"/>
+                                 <setting name="15" value="no"/>
+                              </array>
+                           </struct>
+                           <struct name="polarity">
+                              <array name="polarity_low">
+                                 <setting name="0" value="low"/>
+                                 <setting name="1" value="low"/>
+                                 <setting name="2" value="low"/>
+                                 <setting name="3" value="low"/>
+                                 <setting name="4" value="low"/>
+                                 <setting name="5" value="low"/>
+                                 <setting name="6" value="low"/>
+                                 <setting name="7" value="low"/>
+                                 <setting name="8" value="low"/>
+                                 <setting name="9" value="low"/>
+                                 <setting name="10" value="low"/>
+                                 <setting name="11" value="low"/>
+                                 <setting name="12" value="low"/>
+                                 <setting name="13" value="low"/>
+                                 <setting name="14" value="low"/>
+                                 <setting name="15" value="low"/>
+                              </array>
+                              <array name="polarity_high">
+                                 <setting name="0" value="low"/>
+                                 <setting name="1" value="low"/>
+                                 <setting name="2" value="low"/>
+                                 <setting name="3" value="low"/>
+                                 <setting name="4" value="low"/>
+                                 <setting name="5" value="low"/>
+                                 <setting name="6" value="low"/>
+                                 <setting name="7" value="low"/>
+                                 <setting name="8" value="low"/>
+                                 <setting name="9" value="low"/>
+                                 <setting name="10" value="low"/>
+                                 <setting name="11" value="low"/>
+                                 <setting name="12" value="low"/>
+                                 <setting name="13" value="low"/>
+                                 <setting name="14" value="low"/>
+                                 <setting name="15" value="low"/>
+                              </array>
+                           </struct>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="FLEXCOMM8" uuid="9b463c3c-ec28-40a8-97ce-238c61aa25ac" type="flexcomm_spi" type_id="flexcomm_spi_b6bbc4b9dd1d40a58bb9821123930d3a" mode="SPI_Polling" peripheral="FLEXCOMM8" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_spi">
+                        <setting name="spi_mode" value="kSPI_Master"/>
+                        <setting name="clockSource" value="FXCOMFunctionClock"/>
+                        <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                        <struct name="spi_master_config">
+                           <setting name="enableLoopback" value="false"/>
+                           <setting name="enableMaster" value="true"/>
+                           <setting name="polarity" value="kSPI_ClockPolarityActiveHigh"/>
+                           <setting name="phase" value="kSPI_ClockPhaseFirstEdge"/>
+                           <setting name="direction" value="kSPI_MsbFirst"/>
+                           <setting name="baudRate_Bps" value="6000000"/>
+                           <setting name="dataWidth" value="kSPI_Data8Bits"/>
+                           <setting name="sselNum" value="kSPI_Ssel1"/>
+                           <set name="sselPol_set">
+                              <selected/>
+                           </set>
+                           <setting name="txWatermark" value="kSPI_TxFifo0"/>
+                           <setting name="rxWatermark" value="kSPI_RxFifo1"/>
+                           <struct name="delayConfig">
+                              <setting name="preDelay" value="0"/>
+                              <setting name="postDelay" value="0"/>
+                              <setting name="frameDelay" value="0"/>
+                              <setting name="transferDelay" value="0"/>
+                           </struct>
+                        </struct>
+                     </config_set>
+                  </instance>
+               </instances>
+            </functional_group>
+         </functional_groups>
+         <components>
+            <component name="system" uuid="0a991cc9-bf97-479b-88a6-1f2ed2c85066" type_id="system_54b53072540eeeb8f8e9343e71f28176">
+               <config_set_global name="global_system_definitions">
+                  <setting name="user_definitions" value=""/>
+                  <setting name="user_includes" value=""/>
+                  <setting name="global_init" value=""/>
+               </config_set_global>
+            </component>
+            <component name="msg" uuid="daac8727-4dc2-43dc-9d6e-96fbda3a9e14" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+               <config_set_global name="global_messages"/>
+            </component>
+            <component name="generic_uart" uuid="3df1facd-ec20-40b2-9861-a4c9686a27fc" type_id="generic_uart_8cae00565451cf2346eb1b8c624e73a6">
+               <config_set_global name="global_uart"/>
+            </component>
+            <component name="generic_enet" uuid="319a980c-52d6-4a34-9d7c-f70a1edd4d72" type_id="generic_enet_74db5c914f0ddbe47d86af40cb77a619">
+               <config_set_global name="global_enet"/>
+            </component>
+            <component name="generic_can" uuid="97a73dac-9985-4f10-a94b-5541616acf52" type_id="generic_can_1bfdd78b1af214566c1f23cf6a582d80">
+               <config_set_global name="global_can"/>
+            </component>
+            <component name="uart_cmsis_common" uuid="b153d38a-0ee8-4b3f-81cf-314950ddbbe5" type_id="uart_cmsis_common_9cb8e302497aa696fdbb5a4fd622c2a8">
+               <config_set_global name="global_USART_CMSIS_common" quick_selection="default"/>
+            </component>
+            <component name="gpio_adapter_common" uuid="b432ead9-d539-4de5-9efc-82408db1a58e" type_id="gpio_adapter_common_57579b9ac814fe26bf95df0a384c36b6">
+               <config_set_global name="global_gpio_adapter_common" quick_selection="default"/>
+            </component>
+         </components>
+      </periphs>
+      <tee name="TEE" version="2.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <tee_profile>
+            <processor_version>N/A</processor_version>
+         </tee_profile>
+      </tee>
+   </tools>
+</configuration>

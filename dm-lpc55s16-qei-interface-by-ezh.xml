@@ -1,0 +1,24 @@
+<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="dm-lpc55s16-qei-interface-by-ezh" type="demo" format="projectfile" versionSchema="1.0.0" name="lpc55s16-qei-interface-by-ezh">
+    <display_title>
+        EZH implements Quad encoder function in lpc5516
+    </display_title>
+    <overview>
+        <![CDATA[This demo introduces a method to implement two input quad encoder function by using EZH in LPC55.EZH, as a co-processor of LPC55, can quickly access IO. For mechanical repetitive tasks like Quad encoder(QEI) signal scan. EZH detect the level and edge changing of phase A and phase B, then calculate the direction and index.]]>
+    </overview>
+    <toolchains>
+        <toolchain name="mcux"></toolchain>
+    </toolchains>
+    <families>
+        <family name="lpc"></family>
+    </families>
+    <nxp_compatible_hw>
+        <hw id="LPCXpresso55S16"></hw>
+    </nxp_compatible_hw>
+    <peripherals>
+        <peripheral name="gpio"></peripheral>
+    </peripherals>
+    <categories>
+        <category name="industrial"></category>
+        <category name="motor_control"></category>
+    </categories>
+</data:item>
